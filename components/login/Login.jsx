@@ -13,7 +13,11 @@ const Login = () => {
         </h1>
         <button
           className="bg-btn hover:bg-logo w-[22rem] h-16 text-2xl rounded-full text-white font-bold"
-          onClick={authenticate}
+          onClick={() =>
+            authenticate({
+              signingMessage: 'Welcome to Web3-Dashboard',
+            })
+          }
         >
           Sign in with MetaMask
         </button>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GoDashboard } from 'react-icons/go';
+import { FaHandPointRight } from 'react-icons/fa';
 import { useMoralis } from 'react-moralis';
 import Avatar from '../user/Avatar';
 import Settings from '../user/Settings';
@@ -21,8 +22,10 @@ const Header = () => {
           onClick={() => setSettings(!settings)}
           className="flex items-center"
         >
-          <Avatar />
-          <span className="ml-2 text-gray-300">
+          <span className="text-base text-gray-300">Profile</span>
+          <FaHandPointRight className="font-bold text-2xl text-green-300 animate-pulse mx-2" />
+          <Avatar  />
+          <span className="ml-2 text-gray-500 font-bold">
             Welcome! {user.getUsername()}
           </span>
         </div>
